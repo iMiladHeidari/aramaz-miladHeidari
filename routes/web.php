@@ -17,5 +17,5 @@ use Intervention\Image\Facades\Image;
 */
 
 Route::get('/', function () {
-    //
+    return view('movies');
 });
