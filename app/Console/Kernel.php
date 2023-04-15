@@ -13,6 +13,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
          $schedule->command('app:generate-thumbnails')->hourly();
+         $schedule->command('app:send-latest-prices-to-users-command')->everyTwoHours();
     }
 
     /**
