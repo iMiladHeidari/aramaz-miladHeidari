@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\TableA;
+use App\Models\TableB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Route;
@@ -20,4 +22,10 @@ use Intervention\Image\Facades\Image;
 
 Route::get('/', function () {
     return view('movies');
+});
+Route::get('/test', function () {
+    TableA::create([
+        'name'=>'Milad',
+        'user_star'=>20,
+    ]);
 });
